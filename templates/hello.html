@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Hello from Flask{% endblock %}
+
+{% block head %}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+{% endblock %}
+
+{% block content %}
+    Five oz Racer!
+
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello World!</h1>
+{% endif %}
+
+{% if show %}
+  {{ message }}
+{% endif %}
+{% endblock %}
+

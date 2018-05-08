@@ -1,0 +1,100 @@
+#content {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  color: #0172bb;
+}
+#display-outer {
+  width: 100%;
+}
+#display-inner {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#last-results {
+  margin-bottom: 1em;
+}
+table {
+  border-collapse: collapse;
+  width: 800px;
+}
+table.last-results {
+  font-size: 18pt;
+  color: #fefa4f;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+img.rank {
+  width: 35px;
+}
+.dnf {
+  font-weight: bold;
+  text-align: center;
+  background-color: #000081;
+}
+#race-info {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 16pt;
+}
+#checkered-flag {
+  width: 35px;
+}
+.last-results th {
+  font-weight: normal;
+  text-align: left;
+  background-color: #000081;
+}
+.last-results th.time-cell {
+  text-align: center;
+}
+.last-results td {
+  background-color: #0172bb;
+}
+.last-results td.logo-cell {
+  text-align: center;
+  width: 55px;
+}
+.last-results td.car-cell {
+  /* width: 350px; */
+}
+.last-results td.time-cell {
+  width: 80px;
+  text-align: right;
+}
+.last-results td.lane-cell {
+  width: 60px;
+  text-align: center;
+}
+.last-results td.place-cell {
+  width: 60px;
+  text-align: center;
+}
+table.racing-queue {
+  font-size: 18pt;
+  color: #fefa4f;
+}
+.racing-queue td,
+th {
+  padding: .2em;
+}
+.racing-queue th {
+  font-weight: normal;
+  text-align: left;
+  background-color: #000081;
+}
+.racing-queue td {
+  background-color: #0172bb;
+}
+.racing-queue td.lane-cell {
+  width: 60px;
+  text-align: center;
+}
+.racing-queue td.currently-racing-cell {
+  width: 250px;
+}
+.racing-queue td.on-deck-cell {
+  width: 250px;
+  color: #000081;
+  background-color: #ffff00;
+}

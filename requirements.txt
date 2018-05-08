@@ -1,0 +1,10 @@
+pyserial
+flask
+ipython
+pyzmq
+tornado
+asq
+SQLAlchemy
+Flask-Script
+Flask-SQLAlchemy
+python-dateutil

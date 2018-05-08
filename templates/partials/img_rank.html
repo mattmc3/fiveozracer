@@ -1,0 +1,14 @@
+{% if grade_id == 1 %}
+    {% set filename =  'img/tiger_badge.png' %}
+{% elif grade_id == 2 %}
+    {% set filename =  'img/wolf_badge.png' %}
+{% elif grade_id == 3 %}
+    {% set filename =  'img/bear_badge.png' %}
+{% elif grade_id == 4 %}
+    {% set filename =  'img/webelos_badge.png' %}
+{% elif grade_id == 5 %}
+    {% set filename =  'img/webelos_patch.png' %}
+{% else %}
+    {% set filename =  'img/bobcat_badge.png' %}
+{% endif %}
+<img class="rank" src="{{ url_for('static', filename=filename) }}" />

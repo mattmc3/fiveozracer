@@ -1,0 +1,9 @@
+window.onload = setupRefresh;
+
+function setupRefresh() {
+  setTimeout("refreshPage();", 3000);
+}
+
+function refreshPage() {
+   window.location = location.href;
+}

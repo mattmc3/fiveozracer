@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Derby race display{% endblock %}
+
+{% block head %}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="display-outer">
+<div id="display-inner">
+
+    <div id="last-results">
+    {% set race_results = context['race_results'] %}
+    {% include "partials/last_results.html" %}
+    </div>
+
+    <div id="racing-queue">
+    {% set currently_racing = context['currently_racing'] %}
+    {% set on_deck = context['on_deck'] %}
+    {% include "partials/racing_queue.html" %}
+    </div>
+
+    <div id="race-info">
+        {{ context['race_info'] }}
+    </div>
+</div>
+</div>
+
+{% if show %}
+  {{ message }}
+{% endif %}
+{% endblock %}
+

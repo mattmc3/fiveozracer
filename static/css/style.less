@@ -1,0 +1,137 @@
+@darkblue: #000081;
+@blue: #0172BB;
+@gold: #FEFA4F;
+@yellow: #FFFF00;
+@table_width: 800px;
+@top_font_size: 22pt;
+@bottom_font_size: 22pt;
+@img_size: 35px;
+
+#content {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    color: @blue;
+}
+
+#display-outer {
+    width: 100%;
+}
+
+#display-inner {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#last-results {
+    margin-bottom: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    width: @table_width;
+}
+
+table.last-results {
+    font-size: @top_font_size;
+    color: @gold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+img.rank {
+    width: @img_size;
+}
+
+.dnf {
+    font-weight: bold;
+    text-align: center;
+    background-color: @darkblue;
+}
+
+#race-info {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 16pt;
+}
+
+#checkered-flag {
+    width: @img_size;
+}
+
+.last-results td, th {
+}
+
+.last-results th {
+    font-weight: normal;
+    text-align: left;
+    background-color: @darkblue;
+}
+
+.last-results th.time-cell {
+    text-align: center;
+}
+
+.last-results td {
+    background-color: @blue;
+}
+
+.last-results td.logo-cell {
+    text-align: center;
+    width: 55px;
+}
+
+.last-results td.car-cell {
+    /* width: 350px; */
+}
+
+.last-results td.time-cell {
+    width: 80px;
+    text-align: right;
+}
+
+.last-results td.lane-cell {
+    width: 60px;
+    text-align: center;
+}
+
+.last-results td.place-cell {
+    width: 60px;
+    text-align: center;
+}
+
+
+
+table.racing-queue {
+    font-size: @bottom_font_size;
+    color: @gold;
+}
+
+.racing-queue td, th {
+    padding: .2em;
+}
+
+.racing-queue th {
+    font-weight: normal;
+    text-align: left;
+    background-color: @darkblue;
+}
+
+.racing-queue td {
+    background-color: @blue;
+}
+
+.racing-queue td.lane-cell {
+    width: 60px;
+    text-align: center;
+}
+
+.racing-queue td.currently-racing-cell {
+    width: 250px;
+}
+
+.racing-queue td.on-deck-cell {
+    width: 250px;
+    color: @darkblue;
+    background-color: @yellow;
+}

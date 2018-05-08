@@ -1,0 +1,38 @@
+<table class="last-results">
+    <thead>
+        <tr>
+            <th class="logo-cell">&nbsp;</th>
+            <th class="car-cell">Last Result</th>
+            <th class="time-cell">Time</th>
+            <th class="lane-cell">Lane</th>
+            <th class="place-cell">Place</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for race_result in race_results %}
+        <tr>
+            <td class="logo-cell">
+                {% set grade_id = race_result.racer.grade_id %}
+                {% include "partials/img_rank.html" %}
+            </td>
+            <td class="car-cell">
+                {{ race_result.racer.car_id }}
+                {% if loop.index == 1 %}
+                    <img id="checkered-flag" src="{{ url_for('static', filename='img/checkered_flag.png') }}" />
+                {% endif %}
+            </td>
+            <td class="time-cell">
+                {% if race_result.time is none %}
+                    .
+                {% elif race_result.time >= 6.0 %}
+                    <div class="dnf">DNF</div>
+                {% else %}
+                    {{ "{0:.4f}".format(race_result.time) }}
+                {% endif %}
+            </td>
+            <td class="lane-cell">{{ race_result.lane_number }}</td>
+            <td class="place-cell">{{ race_result.place }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

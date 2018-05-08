@@ -1,0 +1,18 @@
+<table class="racing-queue">
+    <thead>
+        <tr>
+            <th class="lane-cell">Lane</th>
+            <th class="currently-racing-cell">Currently Racing</th>
+            <th class="on-deck-cell">On Deck</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in range(currently_racing|length) %}
+        <tr>
+            <td class="lane-cell">{{ currently_racing[item].lane_number }}</td>
+            <td class="currently-racing-cell">{{ currently_racing[item].racer.car_id }}</td>
+            <td class="on-deck-cell">{{ on_deck[item].racer.car_id }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
